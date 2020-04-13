@@ -11,7 +11,7 @@
     <button name="addrow" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#{{ id }}addmodal">添加</button>
     <button name="editrow" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#{{ id }}editmodal">编辑</button>
     <button name="delrow" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#{{ id }}delmodal">删除</button>
-        <table id="{{ id }}" class="table">
+    <table id="{{ id }}" class="table">
             <thead class="thead-dark">
             <tr class="info">
                 {% for col in columns %}
@@ -20,7 +20,6 @@
             </tr>
             </thead>
         </table>
-
     <div class="modal fade" id="{{ id }}addmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -59,7 +58,7 @@
                             </div>
                         {% endfor %}
                     </form>
-                    <button name="addsubmit" class="btn btn-primary" data-toggle="modal" data-target="#{{ id }}modal">Submit</button>
+                    <button name="editsubmit" class="btn btn-primary" data-toggle="modal" data-target="#{{ id }}editmodal">Submit</button>
                 </div>
                 <div class="modal-footer">
 

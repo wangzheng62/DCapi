@@ -19,16 +19,13 @@ class JSONdata(Resource):
         print(pwd)
         with open(pwd+'/data/{}.json'.format(filename),'a') as f:
             f.close()
-
-
-
         return True
     def put(self,filename):
         formdata=request.form.to_dict()
         print(formdata)
         print(filename)
         pwd=os.getcwd()
-        print(pwd)
+        print("put")
         with open(pwd+'/data/{}.json'.format(filename),'a') as f:
             f.close()
         return True
@@ -37,7 +34,7 @@ class JSONdata(Resource):
         print(formdata)
         print(filename)
         pwd=os.getcwd()
-        print(pwd)
+        print("del")
         with open(pwd+'/data/{}.json'.format(filename),'a') as f:
             f.close()
         return True
