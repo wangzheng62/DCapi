@@ -14,9 +14,9 @@
     <table id="{{ id }}" class="table">
             <thead class="thead-dark">
             <tr class="info">
-                {% for col in columns %}
-                <th>{{ col }}</th>
-                {% endfor %}
+                <th>用户名</th>
+                <th>密码</th>
+
             </tr>
             </thead>
         </table>
@@ -92,7 +92,7 @@ var {{ id }} = $("#{{ id }}").DataTable({
                     select:true,
                     columns: [
                         {% for col in columns %}
-                            {data:"{{ col }}"},
+                            {data:"{{ col }}",},
                         {% endfor %}
                         ]
                 });
@@ -148,6 +148,15 @@ $(document).ready(function(){
                 })
 
             //edit
+            //lanuch modal
+        $('#{{ id }}div').find('[name="editrow"]').on('click', function(){
+            $('{{ id }}editmodal').modal('show');
+            alert({{ id }}.cell({selected:true}).index().row);
+            alert({{ id }}.cell({selected:true}).index().column);
+            alert({{ id }}.cell({selected:true}).index().columnVisible);
+        })
+
+            //ajax
                 $('#{{ id }}div').find('[name="editsubmit"]').on('click', function(){
                     $.ajax({
                         type: "put",
@@ -163,10 +172,11 @@ $(document).ready(function(){
                 })
             //delete
                 $('#{{ id }}div').find('[name="delsubmit"]').on('click', function(){
+                    alert({{ id }}.rows({selected:true}).data().length);
                     $.ajax({
                         type: "delete",
                         url: "{{ ajax }}",
-                        data: $('#{{ id }}form').serialize(),
+                        data: {{ id }}.row({selected:true}).index(),
                         success: function (data) {
                             alert(data)
                         },
