@@ -1,10 +1,11 @@
 from flask import render_template,request
-from humanresource.app import app
-from humanresource.data.user import users
+from DCapi import app
+from DCapi.humanresource.data.user import users
 
 @app.route('/',methods=['get','post'])
 def index():
-    return render_template('test.html',url='/login',form=True)
+    return '11'
+    #return render_template('test.html',url='/login',form=True)
 
 @app.route('/login',methods=['get','post'])
 def login():
@@ -19,7 +20,8 @@ def mainpage():
     return render_template('main.html')
 @app.route('/test',methods=['get','post'])
 def test():
-    return render_template('testjinjia.html')
+    return 'test'
+    #return render_template('testjinjia.html')
 @app.route('/test01',methods=['get','post'])
 def test01():
     return render_template('test01.html')

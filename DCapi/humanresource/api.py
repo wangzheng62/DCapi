@@ -1,8 +1,7 @@
 from flask_restful import Resource,Api
-from flask import request,render_template,make_response
+from flask import request
 import json,os
-from humanresource.app import app
-import humanresource.data.user
+from DCapi import app
 
 api=Api(app,prefix='/api/humanresource')
 class JSONdata(Resource):
@@ -58,6 +57,7 @@ class PYdata(Resource):
         return True
 api.add_resource(PYdata,'/pydata/<dictname>')
 #错误示范
+from flask import render_template,make_response
 class Html(Resource):
     def get(self,filename):
         return make_response(render_template(filename))
