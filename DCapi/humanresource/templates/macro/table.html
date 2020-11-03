@@ -1,0 +1,198 @@
+{% macro tabletool() %}
+
+{% endmacro %}
+
+{% macro table(id="exm",ajax="/api/humanresource/jsondata/user",columns=['name','password']) %}
+<div id="{{ id }}div">
+    <button name="cell" class="btn btn-sm btn-outline-secondary" >选择单元格</button>
+    <button name="row" class="btn btn-sm btn-outline-secondary active" >选择行</button>
+    <button name="column" class="btn btn-sm btn-outline-secondary" >选择列</button>
+    <button name="reloadajax" class="btn btn-sm btn-outline-secondary" >刷新</button>
+    <button name="addrow" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#{{ id }}addmodal">添加</button>
+    <button name="editrow" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#{{ id }}editmodal">编辑</button>
+    <button name="delrow" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#{{ id }}delmodal">删除</button>
+    <table id="{{ id }}" class="table">
+            <thead class="thead-dark">
+            <tr class="info">
+                <th>用户名</th>
+                <th>密码</th>
+
+            </tr>
+            </thead>
+        </table>
+    <div class="modal fade" id="{{ id }}addmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+                <form id="{{ id }}form">
+                    {% for col in columns %}
+                        <div class="form-group">
+                            <label for="{{ id }}{{ col }}">{{ col }}</label>
+                            <input type="text" class="form-control" id="{{ id }}{{ col }}" name="{{ col }}" placeholder="Enter your {{ col }}">
+                        </div>
+                    {% endfor %}
+                </form>
+                <button name="addsubmit" class="btn btn-primary" data-toggle="modal" data-target="#{{ id }}addmodal">Submit</button>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="{{ id }}editmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                </div>
+                <div class="modal-body">
+                    <form id="{{ id }}form">
+                        {% for col in columns %}
+                            <div class="form-group">
+                                <label for="{{ id }}{{ col }}">{{ col }}</label>
+                                <input type="text" class="form-control" id="{{ id }}{{ col }}" name="{{ col }}" placeholder="Enter your {{ col }}">
+                            </div>
+                        {% endfor %}
+                    </form>
+                    <button name="editsubmit" class="btn btn-primary" data-toggle="modal" data-target="#{{ id }}editmodal">Submit</button>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="{{ id }}delmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                </div>
+                <div class="modal-body">
+                    <a>确定删除选中行</a><p>
+                    <button name="delsubmit" class="btn btn-primary" data-toggle="modal" data-target="#{{ id }}delmodal">确认</button>
+                    <button  class="btn btn-primary" data-toggle="modal" data-target="#{{ id }}delmodal">取消</button>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+//init table
+var {{ id }} = $("#{{ id }}").DataTable({
+                    ajax: '{{ ajax }}',
+                    retrieve: true,
+                    select:true,
+                    columns: [
+                        {% for col in columns %}
+                            {data:"{{ col }}",},
+                        {% endfor %}
+                        ]
+                });
+
+$(document).ready(function(){
+
+                {{ id }}.init();
+        //func
+            //cell
+                $('#{{ id }}div').find('[name="cell"]').on('click', function(){
+                    {{ id }}.select.items('cell');
+                    {{ id }}.rows({selected: true}).deselect();
+                    {{ id }}.columns({selected: true}).deselect();
+                    $('#{{ id }}div').find('[name="row"]').removeClass('active');
+                    $('#{{ id }}div').find('[name="column"]').removeClass('active');
+                    $('#{{ id }}div').find('[name="cell"]').addClass('active');
+                })
+            //row
+                $('#{{ id }}div').find('[name="row"]').on('click', function (){
+                    {{ id }}.select.items('row');
+                    {{ id }}.cells({selected: true}).deselect();
+                    {{ id }}.columns({selected: true}).deselect();
+                    $('#{{ id }}div').find('[name="cell"]').removeClass('active');
+                    $('#{{ id }}div').find('[name="column"]').removeClass('active');
+                    $('#{{ id }}div').find('[name="row"]').addClass('active');
+                })
+            //column
+                $('#{{ id }}div').find('[name="column"]').on('click', function(){
+                    {{ id }}.select.items('column');
+                    {{ id }}.rows({selected: true}).deselect();
+                    {{ id }}.cells({selected: true}).deselect();
+                    $('#{{ id }}div').find('[name="row"]').removeClass('active');
+                    $('#{{ id }}div').find('[name="cell"]').removeClass('active');
+                    $('#{{ id }}div').find('[name="column"]').addClass('active');
+                })
+            //reloadajax
+                $('#{{ id }}div').find('[name="reloadajax"]').on('click', function(){
+                    {{ id }}.ajax.reload();
+                })
+            //add
+                $('#{{ id }}div').find('[name="addsubmit"]').on('click', function(){
+                    $.ajax({
+                        type: "post",
+                        url: "{{ ajax }}",
+                        data: $('#{{ id }}form').serialize(),
+                        success: function (data) {
+                            alert(data)
+                        },
+                        error: function(data) {
+                            alert(data)
+                        }
+                    });
+                })
+
+            //edit
+            //lanuch modal
+        $('#{{ id }}div').find('[name="editrow"]').on('click', function(){
+            $('{{ id }}editmodal').modal('show');
+            alert({{ id }}.cell({selected:true}).index().row);
+            alert({{ id }}.cell({selected:true}).index().column);
+            alert({{ id }}.cell({selected:true}).index().columnVisible);
+        })
+
+            //ajax
+                $('#{{ id }}div').find('[name="editsubmit"]').on('click', function(){
+                    $.ajax({
+                        type: "put",
+                        url: "{{ ajax }}",
+                        data: $('#{{ id }}form').serialize(),
+                        success: function (data) {
+                            alert(data)
+                        },
+                        error: function(data) {
+                            alert(data)
+                        }
+                    });
+                })
+            //delete
+                $('#{{ id }}div').find('[name="delsubmit"]').on('click', function(){
+                    alert({{ id }}.rows({selected:true}).data().length);
+                    $.ajax({
+                        type: "delete",
+                        url: "{{ ajax }}",
+                        data: {{ id }}.row({selected:true}).index(),
+                        success: function (data) {
+                            alert(data)
+                        },
+                        error: function(data) {
+                            alert(data)
+                        }
+                    });
+                })
+            })
+
+
+
+</script>
+
+{% endmacro %}
+
