@@ -2,7 +2,7 @@
 
 {% endmacro %}
 
-{% macro table(id="exm",ajax="/api/humanresource/jsondata/user",columns=['name','password']) %}
+{% macro table(id="exm",ajax="/api/humanresource/jsondata/user.json",columns=['name','password']) %}
 <div id="{{ id }}div">
     <button name="cell" class="btn btn-sm btn-outline-secondary" >选择单元格</button>
     <button name="row" class="btn btn-sm btn-outline-secondary active" >选择行</button>
