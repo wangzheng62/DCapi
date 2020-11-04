@@ -2,39 +2,27 @@ from flask_restful import Resource,Api
 from flask import request
 import json,os
 from DCapi import app
-
+datadir=r'G:/Users/36357/PycharmProjects/DCapi/DCapi/humanresource/data/'
 api=Api(app,prefix='/api/humanresource')
 class JSONdata(Resource):
     def get(self,filename):
-        pwd=os.getcwd()
-        print(pwd)
-        with open(pwd+'/data/{}.json'.format(filename),'r') as f:
+        with open(datadir+filename,'r') as f:
             return json.load(f)
     def post(self,filename):
         formdata=request.form.to_dict()
-        print(formdata)
-        print(filename)
-        pwd=os.getcwd()
-        print(pwd)
-        with open(pwd+'/data/{}.json'.format(filename),'a') as f:
+        with open(filename,'a') as f:
             f.close()
         return True
     def put(self,filename):
         formdata=request.form.to_dict()
-        print(formdata)
-        print(filename)
-        pwd=os.getcwd()
         print("put")
-        with open(pwd+'/data/{}.json'.format(filename),'a') as f:
+        with open(filename,'a') as f:
             f.close()
         return True
     def delete(self,filename):
         formdata=request.form.to_dict()
-        print(formdata)
-        print(filename)
-        pwd=os.getcwd()
         print("del")
-        with open(pwd+'/data/{}.json'.format(filename),'a') as f:
+        with open(filename,'r') as f:
             f.close()
         return True
 
