@@ -9,9 +9,9 @@
   <title>AdminLTE 3 | Starter</title>
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/static/AdminLTE/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/static/AdminLTE/dist/css/adminlte.min.css">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="/static/AdminLTE/dist/css/adminlte.min.css" />
     <script src="/static/AdminLTE/dist/js/adminlte.min.js"></script>
@@ -20,7 +20,10 @@
     {% endblock %}
 </head>
 <body>
-
+{% block body01 %}
+{% endblock %}
+{% block body02 %}
+{% endblock %}
     {% block body04 %}
     {% endblock %}
     {% block body05 %}
