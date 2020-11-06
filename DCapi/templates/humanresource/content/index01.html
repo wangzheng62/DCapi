@@ -1,1 +1,4 @@
 {% extends '/humanresource/page/index.html'%}
+{% for cell in list %}
+    {% include '/humanresource/content/test.html' without context %}
+{% endfor %}
