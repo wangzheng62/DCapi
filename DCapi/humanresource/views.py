@@ -1,4 +1,4 @@
-from flask import render_template,request
+from flask import render_template,request,json
 from DCapi import app
 from DCapi.humanresource.data.user import users
 #模板渲染偏函数，设置模板路径
@@ -7,6 +7,18 @@ def new_render_template(name,**content):
     return render_template(template_name_or_list=dirnow+name,**content)
 #view定义
 #测试页
+datadir=r'G:\Users\36357\PycharmProjects\DCapi\DCapi\humanresource\data'
+filename='index.json'
+with open(datadir+'/'+filename,'r') as f:
+    dataindex=json.load(f)
+
+@app.route('/base',methods=['get','post'])
+def base():
+    return new_render_template('/base/base.html',url='/login',form=True)
+
+@app.route('/index01',methods=['get','post'])
+def index01():
+    return new_render_template('/content/index01.html',**dataindex)
 @app.route('/test',methods=['get','post'])
 def test():
     return new_render_template('/page/test.html',url='/login',form=True)
@@ -16,7 +28,8 @@ def test01():
 #主页
 @app.route('/index',methods=['get','post'])
 def index():
-    return new_render_template('/page/index.html',url='/login',form=True)
+    print(dataindex)
+    return new_render_template('/page/index.html',**dataindex)
 #注册页
 #
 @app.route('/login',methods=['get','post'])
