@@ -7,7 +7,8 @@ def new_render_template(name,**content):
     return render_template(template_name_or_list=dirnow+name,**content)
 #view定义
 #测试页
-datadir=r'G:\Users\36357\PycharmProjects\DCapi\DCapi\humanresource\data'
+import os
+datadir=os.path.dirname(os.path.abspath(__file__))+r'\data'
 filename='index.json'
 with open(datadir+'/'+filename,'r') as f:
     dataindex=json.load(f)
