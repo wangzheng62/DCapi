@@ -1,4 +1,6 @@
 {"title":"index",
   "username":"wangzheng",
-  "list":[1,2,3,4]
+  "list":[1,2,3,4],
+  "modals":[{"id":"ttt"},{"id":"edd"}],
+  "card":[]
 }

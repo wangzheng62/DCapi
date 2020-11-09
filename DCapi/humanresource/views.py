@@ -10,15 +10,14 @@ def new_render_template(name,**content):
 import os
 datadir=os.path.dirname(os.path.abspath(__file__))+r'\data'
 filename='index.json'
-with open(datadir+'/'+filename,'r') as f:
-    dataindex=json.load(f)
-
 @app.route('/base',methods=['get','post'])
 def base():
     return new_render_template('/base/base.html',url='/login',form=True)
 
 @app.route('/index01',methods=['get','post'])
 def index01():
+    with open(datadir+'/'+filename,'r') as f:
+        dataindex=json.load(f)
     return new_render_template('/content/index01.html',**dataindex)
 @app.route('/test',methods=['get','post'])
 def test():
@@ -29,6 +28,8 @@ def test01():
 #主页
 @app.route('/index',methods=['get','post'])
 def index():
+    with open(datadir+'/'+filename,'r') as f:
+        dataindex=json.load(f)
     print(dataindex)
     return new_render_template('/page/index.html',**dataindex)
 #注册页

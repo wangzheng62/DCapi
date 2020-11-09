@@ -1,4 +1,13 @@
 {% extends '/humanresource/page/index.html'%}
-{% for cell in list %}
-    {% include '/humanresource/content/test.html' without context %}
-{% endfor %}
+{% block content %}
+    {{ super() }}
+    <div class="col-lg-3">
+    {% include '/humanresource/content/card.html'%}
+    </div>
+{% endblock %}
+{% block mainfooter %}
+    {{ super() }}
+    {% for modal in modals %}
+        {% include '/humanresource/content/modal.html'%}{% endfor %}
+{% endblock %}
+
