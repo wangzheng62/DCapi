@@ -2,5 +2,6 @@
   "username":"wangzheng",
   "list":[1,2,3,4],
   "modals":[{"id":"ttt"},{"id":"edd"}],
-  "card":[]
+  "card":[],
+  "tables":[{"id":"table01"},{"id":"table02"},{"id":"table03"},{"id":"table04"}]
 }
