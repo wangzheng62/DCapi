@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b4bafe5-7b29-4285-a8ea-e8bd78675c30" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/DCapi/humanresource/data/bt.json" />
+    <list default="true" id="2b4bafe5-7b29-4285-a8ea-e8bd78675c30" name="Default" comment="ver01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/DCapi/humanresource/data/index.json" afterPath="$PROJECT_DIR$/DCapi/humanresource/data/index.json" />
+      <change beforePath="$PROJECT_DIR$/DCapi/humanresource/views.py" afterPath="$PROJECT_DIR$/DCapi/humanresource/views.py" />
       <change beforePath="$PROJECT_DIR$/DCapi/templates/humanresource/base/base.html" afterPath="$PROJECT_DIR$/DCapi/templates/humanresource/base/base.html" />
-      <change beforePath="$PROJECT_DIR$/DCapi/templates/humanresource/content/card.html" afterPath="$PROJECT_DIR$/DCapi/templates/humanresource/content/card.html" />
+      <change beforePath="$PROJECT_DIR$/DCapi/templates/humanresource/content/bt.html" afterPath="$PROJECT_DIR$/DCapi/templates/humanresource/content/bt.html" />
       <change beforePath="$PROJECT_DIR$/DCapi/templates/humanresource/content/index01.html" afterPath="$PROJECT_DIR$/DCapi/templates/humanresource/content/index01.html" />
-      <change beforePath="$PROJECT_DIR$/DCapi/templates/humanresource/content/test.html" afterPath="$PROJECT_DIR$/DCapi/templates/humanresource/content/test.html" />
-      <change beforePath="$PROJECT_DIR$/DCapi/templates/humanresource/page/test.html" afterPath="$PROJECT_DIR$/DCapi/templates/humanresource/page/test.html" />
-      <change beforePath="$PROJECT_DIR$/DCapi/templates/macro/table.html" afterPath="$PROJECT_DIR$/DCapi/templates/macro/table.html" />
+      <change beforePath="$PROJECT_DIR$/DCapi/templates/humanresource/content/test.html" afterPath="$PROJECT_DIR$/DCapi/templates/humanresource/test/test.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,15 +28,15 @@
     <SUITE FILE_PATH="coverage/DCapi$run.coverage" NAME="run Coverage Results" MODIFIED="1581647158002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/oauth" />
     <SUITE FILE_PATH="coverage/DCapi$test.coverage" NAME="test Coverage Results" MODIFIED="1593496437083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/humanresource" />
     <SUITE FILE_PATH="coverage/DCapi$api.coverage" NAME="api Coverage Results" MODIFIED="1577430677254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/humanresource" />
-    <SUITE FILE_PATH="coverage/DCapi$run__3_.coverage" NAME="run (3) Coverage Results" MODIFIED="1604990508804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DCapi" />
+    <SUITE FILE_PATH="coverage/DCapi$run__3_.coverage" NAME="run (3) Coverage Results" MODIFIED="1605061997203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DCapi" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCapi/humanresource/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+            <state relative-caret-position="483">
+              <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -48,18 +45,28 @@
       <file leaf-file-name="index01.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/index01.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="184">
+              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DCapi/humanresource/data/index.json">
+      <file leaf-file-name="modal.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="483">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bt.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/bt.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,18 +75,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/base/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testbase01.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/page/testbase01.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="20" selection-end-column="72" />
+            <state relative-caret-position="644">
+              <caret line="28" column="69" lean-forward="true" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -88,8 +85,8 @@
       <file leaf-file-name="card.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/card.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="23">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="30" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -98,13 +95,9 @@
       <file leaf-file-name="table.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DCapi/templates/macro/table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="92">
+              <caret line="4" column="67" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/page/test.html">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/test/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            <state relative-caret-position="299">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="28" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -174,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/humanresource/templates/testbase01.html" />
         <option value="$PROJECT_DIR$/humanresource/templates/data/data01.html" />
         <option value="$PROJECT_DIR$/humanresource/templates/test.html" />
         <option value="$PROJECT_DIR$/humanresource/templates/macro/nav.html" />
@@ -215,16 +207,17 @@
         <option value="$PROJECT_DIR$/DCapi/run.py" />
         <option value="$PROJECT_DIR$/DCapi/datatest.py" />
         <option value="$PROJECT_DIR$/DCapi/templates/humanresource/page/index.html" />
-        <option value="$PROJECT_DIR$/DCapi/humanresource/views.py" />
         <option value="$PROJECT_DIR$/DCapi/templates/humanresource/content/modal.html" />
         <option value="$PROJECT_DIR$/DCapi/templates/macro/table.html" />
-        <option value="$PROJECT_DIR$/DCapi/templates/humanresource/base/base.html" />
         <option value="$PROJECT_DIR$/DCapi/templates/humanresource/content/card.html" />
         <option value="$PROJECT_DIR$/DCapi/humanresource/data/index.json" />
-        <option value="$PROJECT_DIR$/DCapi/templates/humanresource/content/index01.html" />
         <option value="$PROJECT_DIR$/DCapi/templates/humanresource/content/test.html" />
         <option value="$PROJECT_DIR$/DCapi/humanresource/data/bt.json" />
         <option value="$PROJECT_DIR$/DCapi/templates/humanresource/page/test.html" />
+        <option value="$PROJECT_DIR$/DCapi/humanresource/views.py" />
+        <option value="$PROJECT_DIR$/DCapi/templates/humanresource/base/base.html" />
+        <option value="$PROJECT_DIR$/DCapi/templates/humanresource/content/index01.html" />
+        <option value="$PROJECT_DIR$/DCapi/templates/humanresource/content/bt.html" />
       </list>
     </option>
   </component>
@@ -282,7 +275,29 @@
               <item name="DCapi" type="b2602c69:ProjectViewProjectNode" />
               <item name="DCapi" type="462c0819:PsiDirectoryNode" />
               <item name="DCapi" type="462c0819:PsiDirectoryNode" />
+              <item name="humanresource" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCapi" type="462c0819:PsiDirectoryNode" />
+              <item name="DCapi" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCapi" type="462c0819:PsiDirectoryNode" />
+              <item name="DCapi" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="BT" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCapi" type="462c0819:PsiDirectoryNode" />
+              <item name="DCapi" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="BT" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap-table.css" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="DCapi" type="b2602c69:ProjectViewProjectNode" />
@@ -326,6 +341,14 @@
               <item name="DCapi" type="462c0819:PsiDirectoryNode" />
               <item name="DCapi" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="humanresource" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DCapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DCapi" type="462c0819:PsiDirectoryNode" />
+              <item name="DCapi" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="macro" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -341,19 +364,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource\page" />
-      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource\base" />
-      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource" />
-      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\static\humanresource" />
-      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\static" />
       <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\humanresource\data" />
       <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource\content" />
       <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource\page" />
       <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource\base" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource\test" />
+      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource\page" />
+      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource\base" />
+      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\templates\humanresource" />
+      <recent name="G:\Users\36357\PycharmProjects\DCapi\DCapi\static\humanresource" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -830,7 +853,28 @@
       <option name="project" value="LOCAL" />
       <updated>1604912795978</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="ver01">
+      <created>1604996268471</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1604996268471</updated>
+    </task>
+    <task id="LOCAL-00047" summary="ver01">
+      <created>1605060478320</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1605060478321</updated>
+    </task>
+    <task id="LOCAL-00048" summary="ver01">
+      <created>1605071425171</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1605071425171</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -842,7 +886,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23003952" sideWeight="0.48789063" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11601563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16914062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -904,13 +948,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DCapi/oauth/templates/loginfirst.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="60" column="14" lean-forward="false" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -1115,19 +1152,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DCapi/templates/macro/components.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="40" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,7 +1171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,7 +1178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2001">
           <caret line="87" column="83" lean-forward="true" selection-start-line="87" selection-start-column="83" selection-end-line="87" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,58 +1186,6 @@
         <state relative-caret-position="345">
           <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="20" selection-end-column="72" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCapi/humanresource/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/card.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/index01.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/base/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DCapi/templates/macro/table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1231,6 +1205,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DCapi/humanresource/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/page/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DCapi/humanresource/data/bt.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
@@ -1239,10 +1229,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/page/test.html">
+    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/test/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="299">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="28" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCapi/templates/macro/table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="67" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/base/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="69" lean-forward="true" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/index01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="30" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCapi/templates/humanresource/content/bt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>

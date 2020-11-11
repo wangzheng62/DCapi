@@ -21,7 +21,7 @@ def index01():
     return new_render_template('/content/index01.html',**dataindex)
 @app.route('/test',methods=['get','post'])
 def test():
-    return new_render_template('/page/test.html',url='/login',form=True)
+    return new_render_template('/test/test.html',url='/login',form=True)
 @app.route('/test01',methods=['get','post'])
 def test01():
     return new_render_template('/test/starter.html',url='/login',form=True)
