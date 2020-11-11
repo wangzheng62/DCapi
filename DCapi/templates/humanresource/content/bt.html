@@ -1,0 +1,51 @@
+
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">{{ card.title }}</h3>
+        <div class="card-tools">
+            <!-- This will cause the card to maximize when clicked -->
+            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
+            <!-- This will cause the card to collapse when clicked -->
+            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+            <!-- This will cause the card to be removed when clicked -->
+            <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+        </div>
+        <!-- /.card-tools -->
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table
+                id="table"
+                
+                data-toggle="table"
+                data-show-refresh="true"
+                data-click-to-select="true"
+                data-show-toggle="true"
+                data-show-fullscreen="true"
+                data-show-columns="true"
+                data-url="/api/humanresource/jsondata/bt.json"
+                data-search="true"
+
+                data-pagination="true">
+            <thead>
+            <tr>
+                <th data-field="id">ID</th>
+                <th data-field="name">用户名</th>
+                <th data-field="password">密码</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer ">
+
+    </div>
+    <!-- /.card-footer -->
+
+    {% if overlay %}
+        <div class="overlay">
+            <i class="fas fa-2x fa-sync-alt fa-spin"></i>
+        </div>
+    {% endif %}
+</div>
