@@ -15,27 +15,86 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
+        <div id="toolbar">
+            <button id="buttonof{{ table.id }}" class="btn btn-secondary">getSelections</button>
+            <button id="addof{{ table.id }}" class="btn btn-secondary" data-toggle="modal" data-target="#modal01">添加</button>
+            <button id="updateof{{ table.id }}" class="btn btn-secondary" data-toggle="modal" data-target="#modal01">修改</button>
+            <button id="delof{{ table.id }}" class="btn btn-secondary" data-toggle="modal" data-target="#modal.id01">删除</button>
+        </div>
         <table
-                id="table"
-
+                id="{{ table.id }}"
+                data-page-list="[10,20,50]"
                 data-toggle="table"
                 data-show-refresh="true"
                 data-click-to-select="true"
                 data-show-toggle="true"
-                data-show-fullscreen="true"
                 data-show-columns="true"
                 data-url="/api/humanresource/jsondata/bt.json"
                 data-search="true"
-
                 data-pagination="true">
             <thead>
             <tr>
+                <th data-field="state" data-checkbox="true"></th>
                 <th data-field="id">ID</th>
-                <th data-field="name">用户名</th>
-                <th data-field="password">密码</th>
+                <th data-field="name" data-sortable="true">用户名</th>
+                <th data-field="password" data-sortable="true">密码</th>
             </tr>
             </thead>
         </table>
+        <script>
+            var ${{ table.id }} = $('#{{ table.id }}');
+            var $buttonof{{ table.id }} = $('#buttonof{{ table.id }}');
+            var $addof{{ table.id }} = $('#addof{{ table.id }}');
+            var $updateof{{ table.id }} = $('#updateof{{ table.id }}');
+            var $delof{{ table.id }} = $('#delof{{ table.id }}');
+
+            $(function() {
+
+                function form(array) {
+                    var txt="<form>\n" +
+                        "  <div class=\"form-group\">\n" +
+                        "    <label for=\"exampleInputEmail1\">Email address</label>\n" +
+                        "    <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">\n" +
+                        "    <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n" +
+                        "  </div>\n" +
+                        "  <div class=\"form-group\">\n" +
+                        "    <label for=\"exampleInputPassword1\">Password</label>\n" +
+                        "    <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">\n" +
+                        "  </div>\n" +
+                        "  <div class=\"form-group form-check\">\n" +
+                        "    <input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">\n" +
+                        "    <label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>\n" +
+                        "  </div>\n" +
+                        "  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n" +
+                        "</form>"
+                }
+
+
+
+
+                $buttonof{{ table.id }}.click(function () {
+                    alert(JSON.stringify(${{ table.id }}.bootstrapTable('getSelections')));
+                    });
+                $addof{{ table.id }}.click(function () {
+                    ${{ table.id }}.bootstrapTable('append',[{"id":"1","name":"test","password":"test123",}]);
+                    });
+                $updateof{{ table.id }}.click(function () {
+                    var text=JSON.stringify(${{ table.id }}.bootstrapTable('getSelections'));
+
+                    $('#modal01 .modal-body').html(text);
+                    });
+                $delof{{ table.id }}.click(function () {
+
+                    ${{ table.id }}.bootstrapTable('remove',{
+                        field: 'name',
+                        values: $.map(${{ table.id }}.bootstrapTable('getSelections'), function (row) {
+                            return row.name
+                        })
+                        });
+                    });
+                })
+
+        </script>
     </div>
     <!-- /.card-body -->
     <div class="card-footer ">
@@ -48,4 +107,20 @@
             <i class="fas fa-2x fa-sync-alt fa-spin"></i>
         </div>
     {% endif %}
+</div>
+
+<div class="modal fade" id="modal01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+                11
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
 </div>

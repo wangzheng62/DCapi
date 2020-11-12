@@ -3,5 +3,5 @@
   "list":[1,2,3,4],
   "modals":[{"id":"ttt"},{"id":"edd"}],
   "card":[],
-  "tables":[{"id":"table01"},{"id":"table02"},{"id":"table03"},{"id":"table04"}]
+  "tables":[{"id":"table01","url":"/api/humanresource/jsondata/bt.json"},{"id":"table02","url":"/api/humanresource/jsondata/bt.json"},{"id":"table03","url":"/api/humanresource/jsondata/bt.json"},{"id":"table04","url":"/api/humanresource/jsondata/bt.json"}]
 }
