@@ -11,7 +11,7 @@ class JSONdata(Resource):
     def post(self,filename):
         formdata=request.form.to_dict()
         print(formdata)
-        with open(filename,'a') as f:
+        with open(datadir+filename,'a') as f:
             f.close()
         return True
     def put(self,filename):
