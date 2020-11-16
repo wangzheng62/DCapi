@@ -10,6 +10,7 @@ class JSONdata(Resource):
             return json.load(f)
     def post(self,filename):
         formdata=request.form.to_dict()
+        print(formdata)
         with open(filename,'a') as f:
             f.close()
         return True

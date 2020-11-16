@@ -19,6 +19,15 @@ def index01():
     with open(datadir+'/'+filename,'r') as f:
         dataindex=json.load(f)
     return new_render_template('/content/index01.html',**dataindex)
+
+@app.route('/modalform',methods=['get','post'])
+def modalform():
+    j=request.get_json()
+    if j==[]:
+        return '没有选择数据'
+    else:
+        return new_render_template('/content/form.html',form=j[0])
+
 @app.route('/test',methods=['get','post'])
 def test():
     return new_render_template('/test/test.html',url='/login',form=True)
