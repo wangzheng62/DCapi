@@ -12,7 +12,7 @@ class JSONdata(Resource):
         formdata=request.form.to_dict()
         print(formdata)
         with open(datadir+filename,'a') as f:
-            f.close()
+            d=json.load(f)
         return True
     def put(self,filename):
         formdata=request.form.to_dict()

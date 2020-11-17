@@ -54,25 +54,46 @@
                     alert(JSON.stringify(${{ table.id }}.bootstrapTable('getSelections')));
                     });
                 $addof{{ table.id }}.click(function () {
-                    ${{ table.id }}.bootstrapTable('append',[{"id":"1","name":"test","password":"test123",}]);
-                    });
-                $updateof{{ table.id }}.click(function () {
-
                     $.ajax({
-                        type: "POST",
+                        type: "get",
                         url: "/modalform",
                         contentType: "application/json; charset=utf-8",
                         data: JSON.stringify(${{ table.id }}.bootstrapTable('getSelections')),
                         success: function (result,status,xhr) {
                             $('.modal-body').html(result);
-                            var url=${{ table.id }}.attr('data-url');
-                            $('form').attr('url',url);
+                            $('form').attr('url',{{ table.url }});
                             $('form').attr('onsubmit','post()');
+                        }
+                    });
+                    });
+                $updateof{{ table.id }}.click(function () {
+
+                    $.ajax({
+                        type: "post",
+                        url: "/modalform",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(${{ table.id }}.bootstrapTable('getSelections')),
+                        success: function (result,status,xhr) {
+                            $('.modal-body').html(result);
+                            $('form').attr('url',{{ table.url }});
+                            $('form').attr('onsubmit','put()');
                         }
                     });
 
                     });
                 $delof{{ table.id }}.click(function () {
+
+                    $.ajax({
+                        type: "post",
+                        url: "/modalform",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(${{ table.id }}.bootstrapTable('getSelections')),
+                        success: function (result,status,xhr) {
+                            $('.modal-body').html(result);
+                            $('form').attr('url',{{ table.url }});
+                            $('form').attr('onsubmit','put()');
+                        }
+                    });
 
                     ${{ table.id }}.bootstrapTable('remove',{
                         field: 'name',

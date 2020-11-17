@@ -1,42 +1,28 @@
 import json,os
+datadir=r'G:/Users/36357/PycharmProjects/DCapi/DCapi/humanresource/data/'
 
-def modal():
-    a='''{% macro modal(id="myModal",body=None) %}
-    <button type="button" class="btn btn-primary" onclick="showmodal()">
-  Launch demo modal111
-</button>
+def get():
+    with open(datadir+r'bt.json','r') as f:
+        d=json.load(f)
+        return d
+def post(l):
+    res=[]
+    with open(datadir+r'bt.json','r') as f:
+        try:
+            content=json.load(f)
+        except Exception:
+            content=[]
+        if isinstance(content,list):
+            content.extend(l)
+            res=content
+        elif isinstance(content,dict):
+            res.append(content)
+            res.extend(l)
+    with open(datadir+r'bt.json','w') as f1:
+        json.dump(res,f1,sort_keys=True)
+if __name__=='__main__':
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{ id }}">
-  Launch demo modal
-</button>
-<div class="modal fade" id="{{ id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                </div>
-                <div class="modal-body">
-                    {% if body %}
-                    {{ body() }}
-                    {% endif %}
-
-                </div>
-                <div class="modal-footer">
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function showmodal() {
-            $('#{{ id }}').modal({"show":true});
-
-        }
-
-    </script>
-
-{% endmacro %}'''
-    return a
-
-print(modal())
+    l=[{"id":2,"name":"test","password":"123","a":"23"},]
+    print(len(l))
+    post(l)
+    print(get())
