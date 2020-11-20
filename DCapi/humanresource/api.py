@@ -11,12 +11,25 @@ class JSONdata(Resource):
     def post(self,filename):
         formdata=request.form.to_dict()
         print(formdata)
-        with open(datadir+filename,'a') as f:
-            d=json.load(f)
+        res=[]
+        with open(datadir+filename,'r') as f:
+            try:
+                content=json.load(f)
+            except Exception:
+                content=[]
+            if isinstance(content,list):
+                content.extend(formdata)
+                res=content
+            elif isinstance(content,dict):
+                res.append(content)
+                res.extend(formdata)
+
+        with open(datadir+filename,'w') as f1:
+            json.dump(res,f1,sort_keys=True)
         return True
     def put(self,filename):
         formdata=request.form.to_dict()
-        print("put")
+        print(formdata)
         with open(filename,'a') as f:
             f.close()
         return True
