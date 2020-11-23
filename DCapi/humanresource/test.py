@@ -20,6 +20,13 @@ def post(l):
             res.extend(l)
     with open(datadir+r'bt.json','w') as f1:
         json.dump(res,f1,sort_keys=True)
+def put(id,l):
+    id
+    with open(datadir+r'bt.json','r') as f:
+        try:
+            content=json.load(f)
+        except Exception:
+            content=[]
 if __name__=='__main__':
 
     l=[{"id":2,"name":"test","password":"123","a":"23"},]

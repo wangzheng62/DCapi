@@ -44,20 +44,21 @@ class JSONdata(Resource):
 
 api.add_resource(JSONdata,'/jsondata/<filename>')
 
-class PYdata(Resource):
-    def get(self,dictname):
 
-        return eval('humanresource.data.user.{}'.format(dictname))
-    def post(self):
+class DBdata(Resource):
+    def get(self,tablename):
+
+        return True
+    def post(self,tablename):
         formdata=request.form.to_dict()
 
 
         return True
-    def put(self):
+    def put(self,tablename):
         return True
-    def delete(self):
+    def delete(self,tablename):
         return True
-api.add_resource(PYdata,'/pydata/<dictname>')
+api.add_resource(DBdata,'/DB/<tablename>')
 #错误示范
 from flask import render_template,make_response
 class Html(Resource):
